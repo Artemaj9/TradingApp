@@ -12,6 +12,10 @@
 		ACCDA40E2AE1375900DBD278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCDA40D2AE1375900DBD278 /* Assets.xcassets */; };
 		ACCDA4112AE1375900DBD278 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCDA4102AE1375900DBD278 /* Preview Assets.xcassets */; };
 		ACCDA4182AE1376E00DBD278 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4172AE1376E00DBD278 /* BackgroundView.swift */; };
+		ACCDA41A2AE13DEA00DBD278 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4192AE13DEA00DBD278 /* Loader.swift */; };
+		ACCDA41C2AE1412700DBD278 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA41B2AE1412700DBD278 /* LoaderView.swift */; };
+		ACCDA41E2AE1450900DBD278 /* NotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA41D2AE1450900DBD278 /* NotificationTest.swift */; };
+		ACCDA4202AE1499F00DBD278 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA41F2AE1499F00DBD278 /* CustomAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		ACCDA40D2AE1375900DBD278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACCDA4102AE1375900DBD278 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACCDA4172AE1376E00DBD278 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		ACCDA4192AE13DEA00DBD278 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		ACCDA41B2AE1412700DBD278 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		ACCDA41D2AE1450900DBD278 /* NotificationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTest.swift; sourceTree = "<group>"; };
+		ACCDA41F2AE1499F00DBD278 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +61,13 @@
 		ACCDA4082AE1375700DBD278 /* CryptoTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACCDA41F2AE1499F00DBD278 /* CustomAlertView.swift */,
 				ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */,
 				ACCDA40B2AE1375700DBD278 /* ContentView.swift */,
 				ACCDA4172AE1376E00DBD278 /* BackgroundView.swift */,
+				ACCDA4192AE13DEA00DBD278 /* Loader.swift */,
+				ACCDA41D2AE1450900DBD278 /* NotificationTest.swift */,
+				ACCDA41B2AE1412700DBD278 /* LoaderView.swift */,
 				ACCDA40D2AE1375900DBD278 /* Assets.xcassets */,
 				ACCDA40F2AE1375900DBD278 /* Preview Content */,
 			);
@@ -141,7 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCDA4182AE1376E00DBD278 /* BackgroundView.swift in Sources */,
+				ACCDA4202AE1499F00DBD278 /* CustomAlertView.swift in Sources */,
 				ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */,
+				ACCDA41C2AE1412700DBD278 /* LoaderView.swift in Sources */,
+				ACCDA41A2AE13DEA00DBD278 /* Loader.swift in Sources */,
+				ACCDA41E2AE1450900DBD278 /* NotificationTest.swift in Sources */,
 				ACCDA40A2AE1375700DBD278 /* CryptoTestAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

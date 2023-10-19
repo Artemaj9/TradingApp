@@ -8,14 +8,47 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAlert = false
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Color("bgmain")
+                .ignoresSafeArea()
+            Button("Show alert") {
+                withAnimation {
+                    showAlert.toggle()
+                }
+            }
+            if showAlert {
+                CustomAlertView(
+                    title: """
+\"App\" would like to Send You
+ Notifications
+""",
+                    description:
+"""
+Notifications may include alerts,
+sounds and icon badges. This can be
+cofigured in Settings.
+"""
+                    ,
+                    cancelAction: {
+                        // Cancel action here
+                        withAnimation {
+                            showAlert.toggle()
+                        }
+                    },
+                    cancelActionTitle: "Don't Allow",
+                    primaryAction: {
+                      // Primary action here
+                        withAnimation {
+                            showAlert.toggle()
+                        }
+                    },
+                    primaryActionTitle: "Allow"
+                )
+            }
         }
-        .padding()
     }
 }
 

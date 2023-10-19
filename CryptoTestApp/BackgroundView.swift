@@ -21,6 +21,8 @@ struct BackgroundView: View {
                 .scaleEffect(1)
                 .offset(x: -120, y: 100)
                 .blur(radius: 70)
+            LoaderView(percent: 25)
+                .padding(.horizontal, 36)
         }
         .drawingGroup()
         .ignoresSafeArea()
