@@ -21,7 +21,6 @@
 		ACCDA4392AE2916300DBD278 /* CurrencyPairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4382AE2916300DBD278 /* CurrencyPairView.swift */; };
 		ACCDA43B2AE295DF00DBD278 /* PairComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA43A2AE295DF00DBD278 /* PairComponent.swift */; };
 		ACCDA4422AE2AEE300DBD278 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA43D2AE2AEE300DBD278 /* Tabbar.swift */; };
-		ACCDA4432AE2AEE300DBD278 /* TabPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA43E2AE2AEE300DBD278 /* TabPlusButton.swift */; };
 		ACCDA4452AE2AEE300DBD278 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4402AE2AEE300DBD278 /* TabItem.swift */; };
 		ACCDA4462AE2AEE300DBD278 /* TabbarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4412AE2AEE300DBD278 /* TabbarRouter.swift */; };
 /* End PBXBuildFile section */
@@ -42,7 +41,6 @@
 		ACCDA4382AE2916300DBD278 /* CurrencyPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairView.swift; sourceTree = "<group>"; };
 		ACCDA43A2AE295DF00DBD278 /* PairComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairComponent.swift; sourceTree = "<group>"; };
 		ACCDA43D2AE2AEE300DBD278 /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
-		ACCDA43E2AE2AEE300DBD278 /* TabPlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabPlusButton.swift; sourceTree = "<group>"; };
 		ACCDA4402AE2AEE300DBD278 /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		ACCDA4412AE2AEE300DBD278 /* TabbarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				ACCDA43D2AE2AEE300DBD278 /* Tabbar.swift */,
-				ACCDA43E2AE2AEE300DBD278 /* TabPlusButton.swift */,
 				ACCDA4402AE2AEE300DBD278 /* TabItem.swift */,
 				ACCDA4412AE2AEE300DBD278 /* TabbarRouter.swift */,
 			);
@@ -191,7 +188,6 @@
 				ACCDA4392AE2916300DBD278 /* CurrencyPairView.swift in Sources */,
 				ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */,
 				ACCDA41C2AE1412700DBD278 /* LoaderView.swift in Sources */,
-				ACCDA4432AE2AEE300DBD278 /* TabPlusButton.swift in Sources */,
 				ACCDA4452AE2AEE300DBD278 /* TabItem.swift in Sources */,
 				ACCDA4222AE1593A00DBD278 /* TopTraidersView.swift in Sources */,
 				ACCDA4462AE2AEE300DBD278 /* TabbarRouter.swift in Sources */,

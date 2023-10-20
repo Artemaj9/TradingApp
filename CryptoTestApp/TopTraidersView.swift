@@ -16,8 +16,8 @@ struct TopTraidersView: View {
                 VStack(spacing: 0) {
                     Text("TOP 10 Traders")
                         .fontWeight(.bold)
-                        .padding(.top, 36)
-                        .padding(.bottom, 42)
+                        .padding(.top, 20)
+                        .padding(.bottom, 28)
                         .font(.system(size: 24))
                         .foregroundColor(.white)
                     
@@ -60,6 +60,7 @@ struct TopTraidersView: View {
                                     width: geometry.size.width * 0.05, alignment: .leading
                                 )
                             Image(mocData[index].country)
+                                .scaleEffect(1.5)
                                 .frame(
                                     width: geometry.size.width * 0.18, alignment: .center
                                 )
@@ -78,7 +79,8 @@ struct TopTraidersView: View {
                                     width: geometry.size.width * 0.2, alignment: .trailing
                                 )
                         }
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.vertical, 14)
                         .background(index % 2 == 0 ? Color("darkcell") : Color("lightcell"))
                         .padding(.horizontal, 12)
                         

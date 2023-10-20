@@ -24,10 +24,11 @@ struct Tabbar: View {
                 VStack {
                     Spacer()
                     HStack {
-                        TabItem(width: geometry.size.width / 2, height: geometry.size.height / 18, iconName: "home", tabbarRouter: tabbarRouter, assignedPage: .trade)
-                        TabItem(width: geometry.size.width / 2, height: geometry.size.height / 18, iconName: "save", tabbarRouter: tabbarRouter, assignedPage: .top)
+                        TabItem(width: geometry.size.width / 2, height: geometry.size.height / 40, iconName: "bolt.horizontal.fill" ,text: "Trade", tabbarRouter: tabbarRouter, assignedPage: .trade)
+                        TabItem(width: geometry.size.width / 2, height: geometry.size.height / 40, iconName: "person.fill", text: "Top", tabbarRouter: tabbarRouter, assignedPage: .top)
                     }
                     .frame(width: geometry.size.width, height: geometry.size.height / 8)
+                    .background(Color("tabBarBackground2"))
                 }
             }
             .edgesIgnoringSafeArea(.bottom)
