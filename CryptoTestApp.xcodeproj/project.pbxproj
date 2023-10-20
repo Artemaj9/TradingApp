@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC6F421D2AE2F7D40021FAB9 /* GraphsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F421C2AE2F7D40021FAB9 /* GraphsView.swift */; };
+		AC6F42202AE2F85A0021FAB9 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F421F2AE2F85A0021FAB9 /* Source.swift */; };
 		ACCDA40A2AE1375700DBD278 /* CryptoTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */; };
 		ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA40B2AE1375700DBD278 /* ContentView.swift */; };
 		ACCDA40E2AE1375900DBD278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCDA40D2AE1375900DBD278 /* Assets.xcassets */; };
@@ -23,9 +25,12 @@
 		ACCDA4422AE2AEE300DBD278 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA43D2AE2AEE300DBD278 /* Tabbar.swift */; };
 		ACCDA4452AE2AEE300DBD278 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4402AE2AEE300DBD278 /* TabItem.swift */; };
 		ACCDA4462AE2AEE300DBD278 /* TabbarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4412AE2AEE300DBD278 /* TabbarRouter.swift */; };
+		ACCDA4482AE2CC3E00DBD278 /* TradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4472AE2CC3E00DBD278 /* TradeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC6F421C2AE2F7D40021FAB9 /* GraphsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsView.swift; sourceTree = "<group>"; };
+		AC6F421F2AE2F85A0021FAB9 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		ACCDA4062AE1375700DBD278 /* CryptoTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTestAppApp.swift; sourceTree = "<group>"; };
 		ACCDA40B2AE1375700DBD278 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +48,7 @@
 		ACCDA43D2AE2AEE300DBD278 /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		ACCDA4402AE2AEE300DBD278 /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		ACCDA4412AE2AEE300DBD278 /* TabbarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarRouter.swift; sourceTree = "<group>"; };
+		ACCDA4472AE2CC3E00DBD278 /* TradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC6F421E2AE2F8430021FAB9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AC6F421F2AE2F85A0021FAB9 /* Source.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		ACCDA3FD2AE1375700DBD278 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +98,9 @@
 				ACCDA41D2AE1450900DBD278 /* NotificationTest.swift */,
 				ACCDA41B2AE1412700DBD278 /* LoaderView.swift */,
 				ACCDA4382AE2916300DBD278 /* CurrencyPairView.swift */,
+				ACCDA4472AE2CC3E00DBD278 /* TradeView.swift */,
+				AC6F421C2AE2F7D40021FAB9 /* GraphsView.swift */,
+				AC6F421E2AE2F8430021FAB9 /* Source */,
 				ACCDA43A2AE295DF00DBD278 /* PairComponent.swift */,
 				ACCDA4212AE1593A00DBD278 /* TopTraidersView.swift */,
 				ACCDA4232AE1600A00DBD278 /* TopModel.swift */,
@@ -184,13 +201,16 @@
 				ACCDA4182AE1376E00DBD278 /* BackgroundView.swift in Sources */,
 				ACCDA4242AE1600A00DBD278 /* TopModel.swift in Sources */,
 				ACCDA4202AE1499F00DBD278 /* CustomAlertView.swift in Sources */,
+				ACCDA4482AE2CC3E00DBD278 /* TradeView.swift in Sources */,
 				ACCDA4422AE2AEE300DBD278 /* Tabbar.swift in Sources */,
 				ACCDA4392AE2916300DBD278 /* CurrencyPairView.swift in Sources */,
 				ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */,
+				AC6F42202AE2F85A0021FAB9 /* Source.swift in Sources */,
 				ACCDA41C2AE1412700DBD278 /* LoaderView.swift in Sources */,
 				ACCDA4452AE2AEE300DBD278 /* TabItem.swift in Sources */,
 				ACCDA4222AE1593A00DBD278 /* TopTraidersView.swift in Sources */,
 				ACCDA4462AE2AEE300DBD278 /* TabbarRouter.swift in Sources */,
+				AC6F421D2AE2F7D40021FAB9 /* GraphsView.swift in Sources */,
 				ACCDA41A2AE13DEA00DBD278 /* Loader.swift in Sources */,
 				ACCDA41E2AE1450900DBD278 /* NotificationTest.swift in Sources */,
 				ACCDA40A2AE1375700DBD278 /* CryptoTestAppApp.swift in Sources */,
