@@ -16,6 +16,10 @@
 		ACCDA41C2AE1412700DBD278 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA41B2AE1412700DBD278 /* LoaderView.swift */; };
 		ACCDA41E2AE1450900DBD278 /* NotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA41D2AE1450900DBD278 /* NotificationTest.swift */; };
 		ACCDA4202AE1499F00DBD278 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA41F2AE1499F00DBD278 /* CustomAlertView.swift */; };
+		ACCDA4222AE1593A00DBD278 /* TopTraidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4212AE1593A00DBD278 /* TopTraidersView.swift */; };
+		ACCDA4242AE1600A00DBD278 /* TopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4232AE1600A00DBD278 /* TopModel.swift */; };
+		ACCDA4392AE2916300DBD278 /* CurrencyPairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4382AE2916300DBD278 /* CurrencyPairView.swift */; };
+		ACCDA43B2AE295DF00DBD278 /* PairComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA43A2AE295DF00DBD278 /* PairComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		ACCDA41B2AE1412700DBD278 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		ACCDA41D2AE1450900DBD278 /* NotificationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTest.swift; sourceTree = "<group>"; };
 		ACCDA41F2AE1499F00DBD278 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		ACCDA4212AE1593A00DBD278 /* TopTraidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTraidersView.swift; sourceTree = "<group>"; };
+		ACCDA4232AE1600A00DBD278 /* TopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopModel.swift; sourceTree = "<group>"; };
+		ACCDA4382AE2916300DBD278 /* CurrencyPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairView.swift; sourceTree = "<group>"; };
+		ACCDA43A2AE295DF00DBD278 /* PairComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,10 @@
 				ACCDA4192AE13DEA00DBD278 /* Loader.swift */,
 				ACCDA41D2AE1450900DBD278 /* NotificationTest.swift */,
 				ACCDA41B2AE1412700DBD278 /* LoaderView.swift */,
+				ACCDA4382AE2916300DBD278 /* CurrencyPairView.swift */,
+				ACCDA43A2AE295DF00DBD278 /* PairComponent.swift */,
+				ACCDA4212AE1593A00DBD278 /* TopTraidersView.swift */,
+				ACCDA4232AE1600A00DBD278 /* TopModel.swift */,
 				ACCDA40D2AE1375900DBD278 /* Assets.xcassets */,
 				ACCDA40F2AE1375900DBD278 /* Preview Content */,
 			);
@@ -153,12 +165,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCDA4182AE1376E00DBD278 /* BackgroundView.swift in Sources */,
+				ACCDA4242AE1600A00DBD278 /* TopModel.swift in Sources */,
 				ACCDA4202AE1499F00DBD278 /* CustomAlertView.swift in Sources */,
+				ACCDA4392AE2916300DBD278 /* CurrencyPairView.swift in Sources */,
 				ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */,
 				ACCDA41C2AE1412700DBD278 /* LoaderView.swift in Sources */,
+				ACCDA4222AE1593A00DBD278 /* TopTraidersView.swift in Sources */,
 				ACCDA41A2AE13DEA00DBD278 /* Loader.swift in Sources */,
 				ACCDA41E2AE1450900DBD278 /* NotificationTest.swift in Sources */,
 				ACCDA40A2AE1375700DBD278 /* CryptoTestAppApp.swift in Sources */,
+				ACCDA43B2AE295DF00DBD278 /* PairComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
