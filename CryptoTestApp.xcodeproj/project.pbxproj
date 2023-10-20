@@ -20,6 +20,10 @@
 		ACCDA4242AE1600A00DBD278 /* TopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4232AE1600A00DBD278 /* TopModel.swift */; };
 		ACCDA4392AE2916300DBD278 /* CurrencyPairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4382AE2916300DBD278 /* CurrencyPairView.swift */; };
 		ACCDA43B2AE295DF00DBD278 /* PairComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA43A2AE295DF00DBD278 /* PairComponent.swift */; };
+		ACCDA4422AE2AEE300DBD278 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA43D2AE2AEE300DBD278 /* Tabbar.swift */; };
+		ACCDA4432AE2AEE300DBD278 /* TabPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA43E2AE2AEE300DBD278 /* TabPlusButton.swift */; };
+		ACCDA4452AE2AEE300DBD278 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4402AE2AEE300DBD278 /* TabItem.swift */; };
+		ACCDA4462AE2AEE300DBD278 /* TabbarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4412AE2AEE300DBD278 /* TabbarRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		ACCDA4232AE1600A00DBD278 /* TopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopModel.swift; sourceTree = "<group>"; };
 		ACCDA4382AE2916300DBD278 /* CurrencyPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairView.swift; sourceTree = "<group>"; };
 		ACCDA43A2AE295DF00DBD278 /* PairComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairComponent.swift; sourceTree = "<group>"; };
+		ACCDA43D2AE2AEE300DBD278 /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		ACCDA43E2AE2AEE300DBD278 /* TabPlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabPlusButton.swift; sourceTree = "<group>"; };
+		ACCDA4402AE2AEE300DBD278 /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		ACCDA4412AE2AEE300DBD278 /* TabbarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 		ACCDA4082AE1375700DBD278 /* CryptoTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACCDA43C2AE2AEE300DBD278 /* Tabbar */,
 				ACCDA41F2AE1499F00DBD278 /* CustomAlertView.swift */,
 				ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */,
 				ACCDA40B2AE1375700DBD278 /* ContentView.swift */,
@@ -92,6 +101,17 @@
 				ACCDA4102AE1375900DBD278 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACCDA43C2AE2AEE300DBD278 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				ACCDA43D2AE2AEE300DBD278 /* Tabbar.swift */,
+				ACCDA43E2AE2AEE300DBD278 /* TabPlusButton.swift */,
+				ACCDA4402AE2AEE300DBD278 /* TabItem.swift */,
+				ACCDA4412AE2AEE300DBD278 /* TabbarRouter.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,10 +187,14 @@
 				ACCDA4182AE1376E00DBD278 /* BackgroundView.swift in Sources */,
 				ACCDA4242AE1600A00DBD278 /* TopModel.swift in Sources */,
 				ACCDA4202AE1499F00DBD278 /* CustomAlertView.swift in Sources */,
+				ACCDA4422AE2AEE300DBD278 /* Tabbar.swift in Sources */,
 				ACCDA4392AE2916300DBD278 /* CurrencyPairView.swift in Sources */,
 				ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */,
 				ACCDA41C2AE1412700DBD278 /* LoaderView.swift in Sources */,
+				ACCDA4432AE2AEE300DBD278 /* TabPlusButton.swift in Sources */,
+				ACCDA4452AE2AEE300DBD278 /* TabItem.swift in Sources */,
 				ACCDA4222AE1593A00DBD278 /* TopTraidersView.swift in Sources */,
+				ACCDA4462AE2AEE300DBD278 /* TabbarRouter.swift in Sources */,
 				ACCDA41A2AE13DEA00DBD278 /* Loader.swift in Sources */,
 				ACCDA41E2AE1450900DBD278 /* NotificationTest.swift in Sources */,
 				ACCDA40A2AE1375700DBD278 /* CryptoTestAppApp.swift in Sources */,

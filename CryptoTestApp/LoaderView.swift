@@ -26,8 +26,9 @@ struct LoaderView: View {
     private var OverlayView: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
-                Rectangle()
+               Rectangle()
                     .foregroundColor(Color("btn"))
+                    .cornerRadius(30)
                     .frame(width: CGFloat(percent)/100 * geometry.size.width)
             }
         }
@@ -35,6 +36,7 @@ struct LoaderView: View {
     private var PercentView: some View {
         Text("\(percent) %")
             .font(.system(size: 16))
+            .fontWeight(.bold)
             .foregroundColor(.white)
     }
 }

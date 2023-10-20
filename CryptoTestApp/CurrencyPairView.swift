@@ -43,8 +43,6 @@ struct CurrencyPairView: View {
                                 selectedId = pair.id
                             }
                             .padding(.vertical, 12)
-                           // .padding(.leading, 0)
-                            //.padding(.trailing, 0)
                         }
                     }
                 }

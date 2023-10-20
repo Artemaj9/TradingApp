@@ -9,65 +9,105 @@ import SwiftUI
 
 struct TopTraidersView: View {
     var body: some View {
-        ZStack {
-            Color("bgmain")
-                .ignoresSafeArea()
-            VStack(spacing: 0) {
-                Text("TOP 10 Traders")
-                    .fontWeight(.bold)
-                    .padding(.top, 36)
-                    .padding(.bottom, 42)
-                    .font(.system(size: 22))
-                    .foregroundColor(.white)
-                  
-                columnTitles
-                    .background(
-                       // UnevenRoundedRectangle(
-                        Color("lightcell"))
-                    .padding(.horizontal, 12)
-                ForEach(mocData.indices) { index in
-                    HStack {
-                        Text(String(mocData[index].position))
-                            .foregroundColor(Color("ratingheader"))
-                        Spacer()
-                        Image(mocData[index].country)
-                        Spacer()
-                        Text(mocData[index].name)
-                            .foregroundColor(.white)
-                        Spacer()
-                        Text("$\(mocData[index].deposit)")
-                            .foregroundColor(.white)
-                        Spacer()
-                        Text("$\(mocData[index].profit)")
-                            .foregroundColor(Color("btn"))
+        GeometryReader { geometry in
+            ZStack {
+                Color("bgmain")
+                    .ignoresSafeArea()
+                VStack(spacing: 0) {
+                    Text("TOP 10 Traders")
+                        .fontWeight(.bold)
+                        .padding(.top, 36)
+                        .padding(.bottom, 42)
+                        .font(.system(size: 24))
+                        .foregroundColor(.white)
+                    
+                        HStack() {
+                            Text("№")
+                                .frame(
+                                    width: geometry.size.width * 0.05, alignment: .leading
+                                )
+                                .offset(x: -4)
+                            Spacer()
+                            Text("Country")
+                                .frame(
+                                    width: geometry.size.width * 0.17, alignment: .center
+                                )
+                            Text("Name")
+                                .frame(
+                                    width: geometry.size.width * 0.15, alignment: .center
+                                )
+                            Text("Deposit")
+                                .frame(
+                                    width: geometry.size.width * 0.2, alignment: .trailing
+                                )
+                                .offset(x: -8)
+                            Text("Profit")
+                                .frame(
+                                    width: geometry.size.width * 0.2, alignment: .trailing
+                                )
+                                .offset(x: -12)
+                        }
+                        .foregroundColor(Color("ratingheader"))
+                        .padding()
+                        .background(
+                            Color("lightcell"))
+                        .padding(.horizontal, 12)
+                    ForEach(mocData.indices) { index in
+                        HStack {
+                            Text(String(mocData[index].position))
+                                .foregroundColor(Color("ratingheader"))
+                                .frame(
+                                    width: geometry.size.width * 0.05, alignment: .leading
+                                )
+                            Image(mocData[index].country)
+                                .frame(
+                                    width: geometry.size.width * 0.18, alignment: .center
+                                )
+                            Text(mocData[index].name)
+                                .foregroundColor(.white)
+                                .frame(
+                                    width: geometry.size.width * 0.15, alignment: .center                               )
+                            Text("$\(mocData[index].deposit)")
+                                .foregroundColor(.white)
+                                .frame(
+                                    width: geometry.size.width * 0.2, alignment: .center
+                                )
+                            Text("$\(mocData[index].profit)")
+                                .foregroundColor(Color("btn"))
+                                .frame(
+                                    width: geometry.size.width * 0.2, alignment: .trailing
+                                )
+                        }
+                        .padding()
+                        .background(index % 2 == 0 ? Color("darkcell") : Color("lightcell"))
+                        .padding(.horizontal, 12)
+                        
+                       
                     }
-                    .padding()
-                    .background(index % 2 == 0 ? Color("darkcell") : Color("lightcell"))
-                    .padding(.horizontal, 12)
+                    Spacer()
                 }
-                Spacer()
             }
         }
     }
-    
-    private var columnTitles: some View {
-        HStack {
-            HStack(spacing: 4) {
-                Text("№")
-                Spacer()
-                Text("Country")
-                Spacer()
-                Text("Name")
-                Spacer()
-                Text("Deposit")
-                Spacer()
-                Text("Profit")
-            }
-            .foregroundColor(Color("ratingheader"))
-            .padding()
-        }
+//
+//        private var columnTitles: some View {
+//            HStack {
+//                HStack(spacing: 4) {
+//                    Text("№")
+//                    Spacer()
+//                    Text("Country")
+//                    Spacer()
+//                    Text("Name")
+//                    Spacer()
+//                    Text("Deposit")
+//                    Spacer()
+//                    Text("Profit")
+//                }
+//                .foregroundColor(Color("ratingheader"))
+//                .padding()
+//            }
+//        }
     }
-}
 
 struct TopTraidersView_Previews: PreviewProvider {
     static var previews: some View {
