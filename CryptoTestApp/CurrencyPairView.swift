@@ -9,12 +9,14 @@ import SwiftUI
 
 struct CurrencyPairView: View {
     
+    @Binding var text: String
+    
     let padding: CGFloat = 16
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: -8, alignment: nil),
         GridItem(.flexible(), spacing: -8, alignment: nil)
     ]
-    @State var selectedId = 3
+    @Binding var selectedId: Int
     var body: some View {
         ZStack {
             Color("bgmain")
@@ -41,6 +43,8 @@ struct CurrencyPairView: View {
                             .animation(.easeIn(duration: 0.2), value: selectedId)
                             .onTapGesture {
                                 selectedId = pair.id
+                                text = pair.pair
+                                
                             }
                             .padding(.vertical, 12)
                         }
@@ -55,6 +59,6 @@ struct CurrencyPairView: View {
 
 struct CurrencyPairView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyPairView()
+        CurrencyPairView(text: .constant("1"), selectedId: .constant(3))
     }
 }
