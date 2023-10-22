@@ -107,6 +107,7 @@ struct TradeView: View {
                                                     .foregroundColor(Color("greytxt"))
                                                     .padding(.leading, 12)
                                             }
+                                            .gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
 
                                            
                                             Spacer()
@@ -233,7 +234,15 @@ struct TradeView: View {
                        .zIndex(1)
                        .padding(.bottom, -keyboardHeight/3.5)
                                // 3.
-                               .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0 }
+                               .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0
+                                   if $0 == CGFloat(0) {
+                                       for item in vm.cancellables {
+                                           item.cancel()
+                                       }
+                                       self.vm.timerFlag = false
+                                       self.vm.setUpTimer()
+                                   }
+                               }
                        
                     }
                 .offset(y: 20)

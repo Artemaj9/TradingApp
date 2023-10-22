@@ -22,13 +22,21 @@ struct SearchBarView: View {
             TextField(placeholder, text: $timeText)
                 .foregroundColor(.white)
                 .disableAutocorrection(true)
-                .submitLabel(.return)
                 .keyboardType(.numberPad)
                 .onSubmit {
+                    hideKeyboard()
+                    vm.timerFlag = false
                     vm.setUpTimer()
                 }
+                .submitLabel(.done)
                
                 .frame(width: 100, height: 20)
         .font(.headline)
+    }
+}
+
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }

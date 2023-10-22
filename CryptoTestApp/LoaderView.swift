@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-import SwiftUI
 
 struct LoaderView: View {
-    
+    @State var showAlert = false
     @State var percent: Int
     
     var body: some View {

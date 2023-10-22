@@ -27,7 +27,7 @@ struct BalanceBarView: View {
                 .submitLabel(.return)
                 .keyboardType(.numberPad)
                 .onSubmit {
-                  
+                    
                 }
                 .frame(width: 100, height: 20)
         .font(.headline)
