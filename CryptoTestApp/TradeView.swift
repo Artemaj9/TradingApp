@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TradeView: View {
     
@@ -13,6 +14,10 @@ struct TradeView: View {
     @State var selectedId: Int = 3
     @State var investment = 1000
     @State var balance = 10000
+    //@State var timeText: String = "00:12"
+    @State var utcTime: String = "1123"
+    @State private var keyboardHeight: CGFloat = 0
+    @StateObject var vm = TradeViewModel()
     
     var body: some View {
         NavigationStack {
@@ -51,8 +56,6 @@ struct TradeView: View {
                     )
                     .zIndex(1)
                     WebView()
-                    //.scaleEffect(3)
-                    // .offset(x: -420, y: -530)
                         .zIndex(0.4)
                     
                         VStack {
@@ -83,10 +86,22 @@ struct TradeView: View {
                                         Text("Timer")
                                             .font(.body)
                                             .foregroundColor(Color("greytxt"))
-                                            .offset(y: -8)
+                                            .offset(y: 0)
                                         HStack {
                                             Button {
-                                                print("")
+                                                for item in vm.cancellables {
+                                                    item.cancel()
+                                                }
+                                                if vm.textToSeconds(text: vm.timeText) > 10 {
+                                                    vm.timeText = vm.changetime(x: -10)
+                                                    vm.timerFlag = false
+                                                    vm.setUpTimer()
+                                                } else {
+                                                    vm.timeText = "00:00"
+                                                    vm.timerFlag = true
+                                                }
+                                              
+                                               
                                             } label: {
                                                 Image(systemName: "minus.circle")
                                                     .foregroundColor(Color("greytxt"))
@@ -95,18 +110,32 @@ struct TradeView: View {
 
                                            
                                             Spacer()
-                                            Text("00:01")
+                                            SearchBarView(timeText: $vm.timeText,
+                                                          vm: vm,placeholder: "", backgroundColor: Color("graybalance"))
+                                            
+                                                .offset(x: 30)
                                                 .foregroundColor(.white)
+                                              
                                             Spacer()
                                             Button {
+                                                for item in vm.cancellables {
+                                                    item.cancel()
+                                                }
+                                                vm.timerFlag = true
+                                                vm.timeText = vm.changetime(x: 10)
+                                                vm.timerFlag = false
+                                                vm.setUpTimer()
                                             } label: {
                                                 Image(systemName: "plus.circle")
                                                     .foregroundColor(Color("greytxt"))
                                                     .padding(.trailing, 12)
                                             }
                                         }
+                                        .offset(y: -6)
                                     }
+                                 
                                 }
+                           
                                 ZStack {
                                     Rectangle()
                                         .cornerRadius(12)
@@ -115,7 +144,7 @@ struct TradeView: View {
                                         Text("Investment")
                                             .font(.body)
                                             .foregroundColor(Color("greytxt"))
-                                            .offset(y: -8)
+                                           // .offset(y: -8)
                                         HStack {
                                             Button {
                                                 
@@ -130,7 +159,9 @@ struct TradeView: View {
                                                     }
                                             }
                                             Spacer()
-                                            Text("\(investment)")
+                                            BalanceBarView(timeText: $investment, placeholder: "", backgroundColor: Color("graybalance"))
+                                                .offset(x: 30)
+                                                .foregroundColor(.white)
                                                 .foregroundColor(.white)
                                             Spacer()
                                             Button {
@@ -200,8 +231,13 @@ struct TradeView: View {
                         )
                        .offset(y: -90)
                        .zIndex(1)
+                       .padding(.bottom, -keyboardHeight/3.5)
+                               // 3.
+                               .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0 }
                        
                     }
+                .offset(y: 20)
+                
                    
                     
                     //.ignoresSafeArea()
@@ -211,6 +247,9 @@ struct TradeView: View {
                     
                 }
             }
+        .onAppear {
+            vm.setUpTimer()
+        }
         }
 }
 

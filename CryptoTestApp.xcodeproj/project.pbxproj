@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		AC6F421D2AE2F7D40021FAB9 /* GraphsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F421C2AE2F7D40021FAB9 /* GraphsView.swift */; };
 		AC6F42202AE2F85A0021FAB9 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F421F2AE2F85A0021FAB9 /* Source.swift */; };
+		AC6F42232AE56ACB0021FAB9 /* TimeTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F42222AE56ACB0021FAB9 /* TimeTF.swift */; };
+		AC6F42252AE579250021FAB9 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F42242AE579250021FAB9 /* Timer.swift */; };
+		AC6F42272AE57A9A0021FAB9 /* TimerLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F42262AE57A9A0021FAB9 /* TimerLight.swift */; };
+		AC6F422B2AE57E220021FAB9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F422A2AE57E220021FAB9 /* SearchBar.swift */; };
+		AC6F422D2AE5854F0021FAB9 /* BalanceBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F422C2AE5854F0021FAB9 /* BalanceBar.swift */; };
+		AC6F42302AE588650021FAB9 /* extensionPublishers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F422F2AE588650021FAB9 /* extensionPublishers.swift */; };
+		AC6F42322AE58E580021FAB9 /* TradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F42312AE58E580021FAB9 /* TradeViewModel.swift */; };
 		ACCDA40A2AE1375700DBD278 /* CryptoTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */; };
 		ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA40B2AE1375700DBD278 /* ContentView.swift */; };
 		ACCDA40E2AE1375900DBD278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCDA40D2AE1375900DBD278 /* Assets.xcassets */; };
@@ -31,6 +38,13 @@
 /* Begin PBXFileReference section */
 		AC6F421C2AE2F7D40021FAB9 /* GraphsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsView.swift; sourceTree = "<group>"; };
 		AC6F421F2AE2F85A0021FAB9 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		AC6F42222AE56ACB0021FAB9 /* TimeTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTF.swift; sourceTree = "<group>"; };
+		AC6F42242AE579250021FAB9 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		AC6F42262AE57A9A0021FAB9 /* TimerLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerLight.swift; sourceTree = "<group>"; };
+		AC6F422A2AE57E220021FAB9 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		AC6F422C2AE5854F0021FAB9 /* BalanceBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceBar.swift; sourceTree = "<group>"; };
+		AC6F422F2AE588650021FAB9 /* extensionPublishers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionPublishers.swift; sourceTree = "<group>"; };
+		AC6F42312AE58E580021FAB9 /* TradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewModel.swift; sourceTree = "<group>"; };
 		ACCDA4062AE1375700DBD278 /* CryptoTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTestAppApp.swift; sourceTree = "<group>"; };
 		ACCDA40B2AE1375700DBD278 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +84,26 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		AC6F42212AE56AB60021FAB9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AC6F422A2AE57E220021FAB9 /* SearchBar.swift */,
+				AC6F422C2AE5854F0021FAB9 /* BalanceBar.swift */,
+				AC6F42222AE56ACB0021FAB9 /* TimeTF.swift */,
+				AC6F42242AE579250021FAB9 /* Timer.swift */,
+				AC6F42262AE57A9A0021FAB9 /* TimerLight.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AC6F422E2AE588340021FAB9 /* Keyboard features */ = {
+			isa = PBXGroup;
+			children = (
+				AC6F422F2AE588650021FAB9 /* extensionPublishers.swift */,
+			);
+			path = "Keyboard features";
+			sourceTree = "<group>";
+		};
 		ACCDA3FD2AE1375700DBD278 = {
 			isa = PBXGroup;
 			children = (
@@ -96,9 +130,12 @@
 				ACCDA4172AE1376E00DBD278 /* BackgroundView.swift */,
 				ACCDA4192AE13DEA00DBD278 /* Loader.swift */,
 				ACCDA41D2AE1450900DBD278 /* NotificationTest.swift */,
+				AC6F422E2AE588340021FAB9 /* Keyboard features */,
+				AC6F42212AE56AB60021FAB9 /* Components */,
 				ACCDA41B2AE1412700DBD278 /* LoaderView.swift */,
 				ACCDA4382AE2916300DBD278 /* CurrencyPairView.swift */,
 				ACCDA4472AE2CC3E00DBD278 /* TradeView.swift */,
+				AC6F42312AE58E580021FAB9 /* TradeViewModel.swift */,
 				AC6F421C2AE2F7D40021FAB9 /* GraphsView.swift */,
 				AC6F421E2AE2F8430021FAB9 /* Source */,
 				ACCDA43A2AE295DF00DBD278 /* PairComponent.swift */,
@@ -198,20 +235,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6F42232AE56ACB0021FAB9 /* TimeTF.swift in Sources */,
+				AC6F42302AE588650021FAB9 /* extensionPublishers.swift in Sources */,
 				ACCDA4182AE1376E00DBD278 /* BackgroundView.swift in Sources */,
+				AC6F42322AE58E580021FAB9 /* TradeViewModel.swift in Sources */,
 				ACCDA4242AE1600A00DBD278 /* TopModel.swift in Sources */,
 				ACCDA4202AE1499F00DBD278 /* CustomAlertView.swift in Sources */,
 				ACCDA4482AE2CC3E00DBD278 /* TradeView.swift in Sources */,
 				ACCDA4422AE2AEE300DBD278 /* Tabbar.swift in Sources */,
 				ACCDA4392AE2916300DBD278 /* CurrencyPairView.swift in Sources */,
 				ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */,
+				AC6F422B2AE57E220021FAB9 /* SearchBar.swift in Sources */,
+				AC6F42252AE579250021FAB9 /* Timer.swift in Sources */,
 				AC6F42202AE2F85A0021FAB9 /* Source.swift in Sources */,
 				ACCDA41C2AE1412700DBD278 /* LoaderView.swift in Sources */,
 				ACCDA4452AE2AEE300DBD278 /* TabItem.swift in Sources */,
+				AC6F42272AE57A9A0021FAB9 /* TimerLight.swift in Sources */,
 				ACCDA4222AE1593A00DBD278 /* TopTraidersView.swift in Sources */,
 				ACCDA4462AE2AEE300DBD278 /* TabbarRouter.swift in Sources */,
 				AC6F421D2AE2F7D40021FAB9 /* GraphsView.swift in Sources */,
 				ACCDA41A2AE13DEA00DBD278 /* Loader.swift in Sources */,
+				AC6F422D2AE5854F0021FAB9 /* BalanceBar.swift in Sources */,
 				ACCDA41E2AE1450900DBD278 /* NotificationTest.swift in Sources */,
 				ACCDA40A2AE1375700DBD278 /* CryptoTestAppApp.swift in Sources */,
 				ACCDA43B2AE295DF00DBD278 /* PairComponent.swift in Sources */,
