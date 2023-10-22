@@ -38,7 +38,7 @@ struct TradeView: View {
                         
                         VStack {
                             Text("Balance")
-                                .font(.caption)
+                                .font(.body)
                                 .padding(.bottom, 3)
                             Text("\(balance)")
                                 .fontWeight(.black)
@@ -83,17 +83,27 @@ struct TradeView: View {
                                         Text("Timer")
                                             .font(.body)
                                             .foregroundColor(Color("greytxt"))
+                                            .offset(y: -8)
                                         HStack {
-                                            Image(systemName: "minus.circle")
-                                                .foregroundColor(Color("greytxt"))
-                                                .padding(.leading, 12)
+                                            Button {
+                                                print("")
+                                            } label: {
+                                                Image(systemName: "minus.circle")
+                                                    .foregroundColor(Color("greytxt"))
+                                                    .padding(.leading, 12)
+                                            }
+
+                                           
                                             Spacer()
                                             Text("00:01")
                                                 .foregroundColor(.white)
                                             Spacer()
-                                            Image(systemName: "plus.circle")
-                                                .foregroundColor(Color("greytxt"))
-                                                .padding(.trailing, 12)
+                                            Button {
+                                            } label: {
+                                                Image(systemName: "plus.circle")
+                                                    .foregroundColor(Color("greytxt"))
+                                                    .padding(.trailing, 12)
+                                            }
                                         }
                                     }
                                 }
@@ -105,62 +115,82 @@ struct TradeView: View {
                                         Text("Investment")
                                             .font(.body)
                                             .foregroundColor(Color("greytxt"))
+                                            .offset(y: -8)
                                         HStack {
-                                            Image(systemName: "minus.circle")
-                                                .foregroundColor(Color("greytxt"))
-                                                .padding(.leading, 12)
-                                                .onTapGesture {
-                                                    if investment > 0 {
-                                                        investment -= 100
+                                            Button {
+                                                
+                                            } label: {
+                                                Image(systemName: "minus.circle")
+                                                    .foregroundColor(Color("greytxt"))
+                                                    .padding(.leading, 12)
+                                                    .onTapGesture {
+                                                        if investment > 0 {
+                                                            investment -= 100
+                                                        }
                                                     }
-                                                }
+                                            }
                                             Spacer()
                                             Text("\(investment)")
                                                 .foregroundColor(.white)
                                             Spacer()
-                                            Image(systemName: "plus.circle")
-                                                .foregroundColor(Color("greytxt"))
-                                                .padding(.trailing, 12)
-                                                .onTapGesture {
-                                                    if investment >= 0 && investment <= balance - 100 {
-                                                        investment += 100
+                                            Button {
+                                                print("")
+                                            } label: {
+                                                Image(systemName: "plus.circle")
+                                                    .foregroundColor(Color("greytxt"))
+                                                    .padding(.trailing, 12)
+                                                    .onTapGesture {
+                                                        if investment >= 0 && investment <= balance - 100 {
+                                                            investment += 100
+                                                        }
                                                     }
-                                                }
+                                            }
                                         }
                                     }
                                 }
-                                .padding(.bottom, 8)
+                                //
+                            }
+                            .padding(.bottom, 8)
+                            .frame(height: 74)
+                            HStack {
+                                Button {
+                                    
+                                } label: {
+                                    ZStack(alignment: .topLeading) {
+                                        Rectangle()
+                                            .cornerRadius(12)
+                                            .foregroundColor(Color("redSell"))
+                                        Text("Sell")
+                                            .foregroundColor(.white)
+                                            .font(.system(size: 24))
+                                            .fontWeight(.medium)
+                                            .padding([.vertical, .leading])
+                                    }
+                                    .onTapGesture {
+                                        balance += investment
+                                    }
+                                }
+                                Button {
+                                    
+                                } label: {
+                                    ZStack(alignment: .topLeading) {
+                                        Rectangle()
+                                            .cornerRadius(12)
+                                            .foregroundColor(Color("btn"))
+                                        Text("Buy")
+                                            .foregroundColor(.white)
+                                            .font(.system(size: 24))
+                                            .fontWeight(.medium)
+                                            .padding([.vertical, .leading])
+                                    }
+                                    .onTapGesture {
+                                        if balance >= investment {
+                                            balance -= investment
+                                        }
+                                    }
+                                }
                             }
                             .frame(height: 63)
-                            HStack {
-                                ZStack(alignment: .topLeading) {
-                                    Rectangle()
-                                        .cornerRadius(12)
-                                        .foregroundColor(Color("redSell"))
-                                    Text("Sell")
-                                        .foregroundColor(.white)
-                                        .font(.system(size: 24))
-                                        .fontWeight(.medium)
-                                        .padding([.vertical, .leading])
-                                }
-                                .onTapGesture {
-                                    balance += investment
-                                }
-                                ZStack(alignment: .topLeading) {
-                                    Rectangle()
-                                        .cornerRadius(12)
-                                        .foregroundColor(Color("btn"))
-                                    Text("Buy")
-                                        .foregroundColor(.white)
-                                        .font(.system(size: 24))
-                                        .fontWeight(.medium)
-                                        .padding([.vertical, .leading])
-                                }
-                                .onTapGesture {
-                                    balance -= investment
-                                }
-                            }
-                            .frame(height: 53)
                             
                         }
                         .frame(width: .infinity)

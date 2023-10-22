@@ -10,7 +10,7 @@ import SwiftUI
 struct CurrencyPairView: View {
     
     @Binding var text: String
-    
+    @Environment(\.dismiss) private var dismiss
     let padding: CGFloat = 16
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: -8, alignment: nil),
@@ -22,7 +22,7 @@ struct CurrencyPairView: View {
             Color("bgmain")
                 .ignoresSafeArea()
             GeometryReader { geometry in
-            VStack {
+                VStack {
                     LazyVGrid(
                         columns: columns,
                         alignment: .center,
@@ -39,7 +39,7 @@ struct CurrencyPairView: View {
                             .background(
                                 RoundedRectangle(cornerRadius: 12)
                                     .fill(selectedId == pair.id ? Color("btn") : Color("bgpair"))
-                                )
+                            )
                             .animation(.easeIn(duration: 0.2), value: selectedId)
                             .onTapGesture {
                                 selectedId = pair.id
@@ -50,15 +50,40 @@ struct CurrencyPairView: View {
                         }
                     }
                 }
-            .padding(.horizontal, 24)
-            .padding(.top, 48)
+                .padding(.horizontal, 24)
+                .padding(.top, 48)
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationTitle("Currency pair")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                ZStack {
+                    Button {
+                        dismiss()
+                    } label: {
+                        HStack {
+                            Image(systemName: "chevron.backward")
+                                .foregroundColor(.white)
+                                .font(.body)
+                        }
+                    }
+                }
+                .offset(y: 10)
+            }
+            ToolbarItem(placement: .principal) {
+                Text("Currency pair")
+                    .fontWeight(.semibold)
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .offset(y: 12)
             }
         }
     }
 }
 
-struct CurrencyPairView_Previews: PreviewProvider {
-    static var previews: some View {
-        CurrencyPairView(text: .constant("1"), selectedId: .constant(3))
-    }
-}
+//struct CurrencyPairView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CurrencyPairView(text: .constant("1"), selectedId: .constant(3))
+//    }
+//}
