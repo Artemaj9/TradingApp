@@ -11,8 +11,9 @@ import Combine
 
 final class FirstScreenViewModel: ObservableObject {
     @Published var percent = 0
-    @State var showAlert = false
+    @Published var showAlert = false
     var cancellables = Set<AnyCancellable>()
+    @Published var goTabBar = false
     
     func setUpTimer() {
         Timer

@@ -57,6 +57,7 @@ struct TradeView: View {
                     .zIndex(1)
                     WebView()
                         .zIndex(0.4)
+                        .offset(x: -20)
                     
                         VStack {
                             NavigationLink(destination: CurrencyPairView(text: $pair, selectedId: $selectedId )) {

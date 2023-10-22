@@ -18,6 +18,7 @@
 		AC6F42322AE58E580021FAB9 /* TradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F42312AE58E580021FAB9 /* TradeViewModel.swift */; };
 		AC6F42342AE5AD850021FAB9 /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F42332AE5AD850021FAB9 /* FirstScreen.swift */; };
 		AC6F42362AE5AE8D0021FAB9 /* FirstScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F42352AE5AE8D0021FAB9 /* FirstScreenViewModel.swift */; };
+		AC6F42382AE5B6BC0021FAB9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F42372AE5B6BC0021FAB9 /* Coordinator.swift */; };
 		ACCDA40A2AE1375700DBD278 /* CryptoTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */; };
 		ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA40B2AE1375700DBD278 /* ContentView.swift */; };
 		ACCDA40E2AE1375900DBD278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCDA40D2AE1375900DBD278 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		AC6F42312AE58E580021FAB9 /* TradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewModel.swift; sourceTree = "<group>"; };
 		AC6F42332AE5AD850021FAB9 /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		AC6F42352AE5AE8D0021FAB9 /* FirstScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewModel.swift; sourceTree = "<group>"; };
+		AC6F42372AE5B6BC0021FAB9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		ACCDA4062AE1375700DBD278 /* CryptoTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTestAppApp.swift; sourceTree = "<group>"; };
 		ACCDA40B2AE1375700DBD278 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				ACCDA43D2AE2AEE300DBD278 /* Tabbar.swift */,
 				ACCDA4402AE2AEE300DBD278 /* TabItem.swift */,
 				ACCDA4412AE2AEE300DBD278 /* TabbarRouter.swift */,
+				AC6F42372AE5B6BC0021FAB9 /* Coordinator.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				ACCDA4202AE1499F00DBD278 /* CustomAlertView.swift in Sources */,
 				ACCDA4482AE2CC3E00DBD278 /* TradeView.swift in Sources */,
 				ACCDA4422AE2AEE300DBD278 /* Tabbar.swift in Sources */,
+				AC6F42382AE5B6BC0021FAB9 /* Coordinator.swift in Sources */,
 				ACCDA4392AE2916300DBD278 /* CurrencyPairView.swift in Sources */,
 				ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */,
 				AC6F422B2AE57E220021FAB9 /* SearchBar.swift in Sources */,
