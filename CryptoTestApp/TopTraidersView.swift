@@ -52,6 +52,7 @@ struct TopTraidersView: View {
                         .padding()
                         .background(
                             Color("lightcell"))
+                        .cornerRadius(9, corners: [.topLeft, .topRight])
                         .padding(.horizontal, 12)
                     ForEach(mocData.indices) { index in
                         HStack {
@@ -85,6 +86,7 @@ struct TopTraidersView: View {
                         .padding(.horizontal)
                         .padding(.vertical, 14)
                         .background(index % 2 == 0 ? Color("darkcell") : Color("lightcell"))
+                        .cornerRadius(index == 9 ? 9 : 0, corners: [.bottomLeft, .bottomRight])
                         .padding(.horizontal, 12)
                         
                        

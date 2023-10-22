@@ -17,6 +17,7 @@ struct CurrencyPairView: View {
         GridItem(.flexible(), spacing: -8, alignment: nil)
     ]
     @Binding var selectedId: Int
+    @ObservedObject var vm: TradeViewModel
     var body: some View {
         ZStack {
             Color("bgmain")
@@ -43,7 +44,8 @@ struct CurrencyPairView: View {
                             .animation(.easeIn(duration: 0.2), value: selectedId)
                             .onTapGesture {
                                 selectedId = pair.id
-                                text = pair.pair
+                               // text = pair.pair
+                                vm.pair = pair.pair
                                 
                             }
                             .padding(.vertical, 12)

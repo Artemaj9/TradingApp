@@ -36,14 +36,14 @@ var currencyPairs = [
     Pair(id:13, pair:"RUB/USD")]
 
 var mocData: [TopModel] = [
-TopModel(position: 1, country: "korea", name: "Oliver", deposit: 9993, profit: 100000),
-TopModel(position: 2, country: "korea", name: "Jack", deposit: 5555, profit: 15000),
-TopModel(position: 3, country: "korea", name: "Oliver", deposit: 9993, profit: 100000),
-TopModel(position: 4, country: "korea", name: "Jack", deposit: 5555, profit: 15000),
-TopModel(position: 5, country: "korea", name: "Oliver", deposit: 9993, profit: 100000),
-TopModel(position: 6, country: "korea", name: "Jack", deposit: 5555, profit: 15000),
-TopModel(position: 7, country: "korea", name: "Oliver", deposit: 9993, profit: 100000),
-TopModel(position: 8, country: "korea", name: "Jack", deposit: 5555, profit: 15000),
-TopModel(position: 9, country: "korea", name: "Oliver", deposit: 9993, profit: 100000),
-TopModel(position: 10, country: "korea", name: "Jack", deposit: 5555, profit: 15000),
+TopModel(position: 1, country: "swed", name: "Oliver", deposit: 19993, profit: 101501),
+TopModel(position: 2, country: "usa", name: "Bob", deposit: 5555, profit: 97900),
+TopModel(position: 3, country: "korea", name: "Kim", deposit: 3995, profit: 95200),
+TopModel(position: 4, country: "rus", name: "Vovan", deposit: 4500, profit: 88020),
+TopModel(position: 5, country: "brazil", name: "Jacob", deposit: 10000, profit: 74125),
+TopModel(position: 6, country: "greece", name: "Mark", deposit: 14200, profit: 52300),
+TopModel(position: 7, country: "belgium", name: "Stewart", deposit: 7000, profit: 39401),
+TopModel(position: 8, country: "france", name: "Jack", deposit: 5555, profit: 25700),
+TopModel(position: 9, country: "wales", name: "Angela", deposit: 993, profit: 19080),
+TopModel(position: 10, country: "austr", name: "Tim", deposit: 1555, profit: 12000),
 ]

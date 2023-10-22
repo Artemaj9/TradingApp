@@ -14,6 +14,7 @@ class TradeViewModel: ObservableObject {
     @Published var timeText = "00:12"
     @Published var timerFlag = false
     @Published var showAlert = false
+    @Published var pair = "RUB/USD"
     
     var cancellables = Set<AnyCancellable>()
     

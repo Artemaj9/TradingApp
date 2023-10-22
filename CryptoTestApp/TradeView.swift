@@ -10,7 +10,7 @@ import Combine
 
 struct TradeView: View {
     
-    @State var pair: String = "GPB/USD"
+  //  @State var pair: String = "GPB/USD"
     @State var selectedId: Int = 3
     @State var investment = 1000
     @State var balance = 10000
@@ -56,19 +56,25 @@ struct TradeView: View {
                         Color("bgmain")
                     )
                     .zIndex(1)
-                    WebView(shouldRefresh: model.shouldRefresh)
+                    ZStack {
+                        WebView(shouldRefresh: model.shouldRefresh)
+                            .opacity(vm.pair == "RUB/USD" ? 1 : 0)
+                        WebView2()
+                            .opacity(vm.pair == "RUB/USD" ? 0 : 1)
+                            .scaleEffect(y: 1.1)
+                    }
                         .zIndex(0.4)
                         .offset(x: -20)
                     
                     VStack {
-                        NavigationLink(destination: CurrencyPairView(text: $pair, selectedId: $selectedId )) {
+                        NavigationLink(destination: CurrencyPairView(text: $vm.pair, selectedId: $selectedId, vm: vm)) {
                             ZStack {
                                 Rectangle()
                                     .cornerRadius(12)
                                     .foregroundColor(Color("graybalance"))
                                 
                                     .frame(height: 63)
-                                Text(pair)
+                                Text(vm.pair)
                                     .foregroundColor(.white)
                                 HStack {
                                     Spacer()
@@ -116,6 +122,9 @@ struct TradeView: View {
                                         Spacer()
                                         SearchBarView(timeText: $vm.timeText,
                                                       vm: vm,placeholder: "", backgroundColor: Color("graybalance"))
+                                        .onTapGesture {
+                                            reload()
+                                        }
                                         .onSubmit {
                                             reload()
                                         }
@@ -185,6 +194,7 @@ struct TradeView: View {
                                                 }
                                         }
                                     }
+                                    .offset(y: -6)
                                 }
                             }
                             //
@@ -236,6 +246,7 @@ struct TradeView: View {
                     }
                     .frame(width: .infinity)
                     .padding(36)
+                    .padding(.vertical, -12)
                     .background(
                         Color("bgmain")
                     )
@@ -280,7 +291,7 @@ struct TradeView: View {
                                 vm.showAlert.toggle()
                             }
                         },
-                        primaryActionTitle: "Ok"
+                        primaryActionTitle: "OK"
                     )
                 }
             }

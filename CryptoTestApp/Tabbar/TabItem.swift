@@ -11,7 +11,7 @@ struct TabItem: View {
     
     var body: some View {
         VStack {
-            Image(systemName: iconName)
+            Image(tabbarRouter.currentPage == assignedPage ? iconName : iconName + "gr")
                 .renderingMode(.template)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
