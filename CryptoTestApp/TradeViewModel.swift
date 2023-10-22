@@ -13,6 +13,7 @@ class TradeViewModel: ObservableObject {
     @Published var seconds: Int = 0
     @Published var timeText = "00:12"
     @Published var timerFlag = false
+    @Published var showAlert = false
     
     var cancellables = Set<AnyCancellable>()
     

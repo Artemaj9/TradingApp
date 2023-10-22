@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TopModel {
+struct TopModel: Equatable {
     let position: Int
     let country: String
     let name: String

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TopTraidersView: View {
+    @StateObject var vm = TopTraidersViewModel()
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -79,6 +80,8 @@ struct TopTraidersView: View {
                                     width: geometry.size.width * 0.2, alignment: .trailing
                                 )
                         }
+                        .animation(.easeIn, value: mocData[index].deposit)
+                        .animation(.easeInOut, value: mocData[index].profit)
                         .padding(.horizontal)
                         .padding(.vertical, 14)
                         .background(index % 2 == 0 ? Color("darkcell") : Color("lightcell"))
@@ -88,6 +91,9 @@ struct TopTraidersView: View {
                     }
                     Spacer()
                 }
+            }
+            .onAppear {
+                vm.setUpTimer()
             }
         }
     }

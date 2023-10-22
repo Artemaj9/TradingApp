@@ -18,6 +18,7 @@ struct TradeView: View {
     @State var utcTime: String = "1123"
     @State private var keyboardHeight: CGFloat = 0
     @StateObject var vm = TradeViewModel()
+    @StateObject var model = Model2()
     
     var body: some View {
         NavigationStack {
@@ -55,213 +56,251 @@ struct TradeView: View {
                         Color("bgmain")
                     )
                     .zIndex(1)
-                    WebView()
+                    WebView(shouldRefresh: model.shouldRefresh)
                         .zIndex(0.4)
                         .offset(x: -20)
                     
-                        VStack {
-                            NavigationLink(destination: CurrencyPairView(text: $pair, selectedId: $selectedId )) {
-                                ZStack {
-                                    Rectangle()
-                                        .cornerRadius(12)
-                                        .foregroundColor(Color("graybalance"))
-                                   
-                                        .frame(height: 63)
-                                   Text(pair)
+                    VStack {
+                        NavigationLink(destination: CurrencyPairView(text: $pair, selectedId: $selectedId )) {
+                            ZStack {
+                                Rectangle()
+                                    .cornerRadius(12)
+                                    .foregroundColor(Color("graybalance"))
+                                
+                                    .frame(height: 63)
+                                Text(pair)
+                                    .foregroundColor(.white)
+                                HStack {
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .scaleEffect(1.2)
                                         .foregroundColor(.white)
-                                    HStack {
-                                        Spacer()
-                                        Image(systemName: "chevron.right")
-                                            .scaleEffect(1.2)
-                                            .foregroundColor(.white)
-                                            .offset(x: -20)
-                                    }
+                                        .offset(x: -20)
                                 }
                             }
-                            HStack {
-                                ZStack {
-                                    Rectangle()
-                                        .cornerRadius(12)
-                                        .foregroundColor(Color("graybalance"))
-                                    VStack {
-                                        Text("Timer")
-                                            .font(.body)
-                                            .foregroundColor(Color("greytxt"))
-                                            .offset(y: 0)
-                                        HStack {
-                                            Button {
-                                                for item in vm.cancellables {
-                                                    item.cancel()
-                                                }
-                                                if vm.textToSeconds(text: vm.timeText) > 10 {
-                                                    vm.timeText = vm.changetime(x: -10)
-                                                    vm.timerFlag = false
-                                                    vm.setUpTimer()
-                                                } else {
-                                                    vm.timeText = "00:00"
-                                                    vm.timerFlag = true
-                                                }
-                                              
-                                               
-                                            } label: {
-                                                Image(systemName: "minus.circle")
-                                                    .foregroundColor(Color("greytxt"))
-                                                    .padding(.leading, 12)
+                        }
+                        HStack {
+                            ZStack {
+                                Rectangle()
+                                    .cornerRadius(12)
+                                    .foregroundColor(Color("graybalance"))
+                                VStack {
+                                    Text("Timer")
+                                        .font(.body)
+                                        .foregroundColor(Color("greytxt"))
+                                        .offset(y: 0)
+                                    HStack {
+                                        Button {
+                                            for item in vm.cancellables {
+                                                item.cancel()
                                             }
-                                            .gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
-
-                                           
-                                            Spacer()
-                                            SearchBarView(timeText: $vm.timeText,
-                                                          vm: vm,placeholder: "", backgroundColor: Color("graybalance"))
-                                            
-                                                .offset(x: 30)
-                                                .foregroundColor(.white)
-                                              
-                                            Spacer()
-                                            Button {
-                                                for item in vm.cancellables {
-                                                    item.cancel()
-                                                }
-                                                vm.timerFlag = true
-                                                vm.timeText = vm.changetime(x: 10)
+                                            if vm.textToSeconds(text: vm.timeText) > 10 {
+                                                vm.timeText = vm.changetime(x: -10)
                                                 vm.timerFlag = false
                                                 vm.setUpTimer()
-                                            } label: {
-                                                Image(systemName: "plus.circle")
-                                                    .foregroundColor(Color("greytxt"))
-                                                    .padding(.trailing, 12)
+                                            } else {
+                                                vm.timeText = "00:00"
+                                                vm.timerFlag = true
                                             }
+                                            reload()
+                                            
+                                            
+                                        } label: {
+                                            Image(systemName: "minus.circle")
+                                                .foregroundColor(Color("greytxt"))
+                                                .padding(.leading, 12)
                                         }
-                                        .offset(y: -6)
+                                        .gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
+                                        
+                                        
+                                        Spacer()
+                                        SearchBarView(timeText: $vm.timeText,
+                                                      vm: vm,placeholder: "", backgroundColor: Color("graybalance"))
+                                        .onSubmit {
+                                            reload()
+                                        }
+                                        
+                                        .offset(x: 30)
+                                        .foregroundColor(.white)
+                                        
+                                        Spacer()
+                                        Button {
+                                            for item in vm.cancellables {
+                                                item.cancel()
+                                            }
+                                            vm.timerFlag = true
+                                            vm.timeText = vm.changetime(x: 10)
+                                            vm.timerFlag = false
+                                            vm.setUpTimer()
+                                            reload()
+                                        } label: {
+                                            Image(systemName: "plus.circle")
+                                                .foregroundColor(Color("greytxt"))
+                                                .padding(.trailing, 12)
+                                        }
                                     }
-                                 
+                                    .offset(y: -6)
                                 }
-                           
-                                ZStack {
+                                
+                            }
+                            
+                            ZStack {
+                                Rectangle()
+                                    .cornerRadius(12)
+                                    .foregroundColor(Color("graybalance"))
+                                VStack {
+                                    Text("Investment")
+                                        .font(.body)
+                                        .foregroundColor(Color("greytxt"))
+                                    // .offset(y: -8)
+                                    HStack {
+                                        Button {
+                                            
+                                        } label: {
+                                            Image(systemName: "minus.circle")
+                                                .foregroundColor(Color("greytxt"))
+                                                .padding(.leading, 12)
+                                                .onTapGesture {
+                                                    if investment > 0 {
+                                                        investment -= 100
+                                                    }
+                                                    reload()
+                                                }
+                                        }
+                                        Spacer()
+                                        BalanceBarView(timeText: $investment, placeholder: "", backgroundColor: Color("graybalance"))
+                                            .offset(x: 30)
+                                            .foregroundColor(.white)
+                                            .foregroundColor(.white)
+                                        Spacer()
+                                        Button {
+                                        } label: {
+                                            Image(systemName: "plus.circle")
+                                                .foregroundColor(Color("greytxt"))
+                                                .padding(.trailing, 12)
+                                                .onTapGesture {
+                                                    if investment >= 0 && investment <= balance - 100 {
+                                                        investment += 100
+                                                    }
+                                                }
+                                        }
+                                    }
+                                }
+                            }
+                            //
+                        }
+                        .padding(.bottom, 8)
+                        .frame(height: 74)
+                        HStack {
+                            Button {
+                                
+                            } label: {
+                                ZStack(alignment: .topLeading) {
                                     Rectangle()
                                         .cornerRadius(12)
-                                        .foregroundColor(Color("graybalance"))
-                                    VStack {
-                                        Text("Investment")
-                                            .font(.body)
-                                            .foregroundColor(Color("greytxt"))
-                                           // .offset(y: -8)
-                                        HStack {
-                                            Button {
-                                                
-                                            } label: {
-                                                Image(systemName: "minus.circle")
-                                                    .foregroundColor(Color("greytxt"))
-                                                    .padding(.leading, 12)
-                                                    .onTapGesture {
-                                                        if investment > 0 {
-                                                            investment -= 100
-                                                        }
-                                                    }
-                                            }
-                                            Spacer()
-                                            BalanceBarView(timeText: $investment, placeholder: "", backgroundColor: Color("graybalance"))
-                                                .offset(x: 30)
-                                                .foregroundColor(.white)
-                                                .foregroundColor(.white)
-                                            Spacer()
-                                            Button {
-                                                print("")
-                                            } label: {
-                                                Image(systemName: "plus.circle")
-                                                    .foregroundColor(Color("greytxt"))
-                                                    .padding(.trailing, 12)
-                                                    .onTapGesture {
-                                                        if investment >= 0 && investment <= balance - 100 {
-                                                            investment += 100
-                                                        }
-                                                    }
-                                            }
-                                        }
-                                    }
+                                        .foregroundColor(Color("redSell"))
+                                    Text("Sell")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 24))
+                                        .fontWeight(.medium)
+                                        .padding([.vertical, .leading])
                                 }
-                                //
+                                .onTapGesture {
+                                    balance += investment
+                                    vm.showAlert = true
+                                }
                             }
-                            .padding(.bottom, 8)
-                            .frame(height: 74)
-                            HStack {
-                                Button {
-                                    
-                                } label: {
-                                    ZStack(alignment: .topLeading) {
-                                        Rectangle()
-                                            .cornerRadius(12)
-                                            .foregroundColor(Color("redSell"))
-                                        Text("Sell")
-                                            .foregroundColor(.white)
-                                            .font(.system(size: 24))
-                                            .fontWeight(.medium)
-                                            .padding([.vertical, .leading])
-                                    }
-                                    .onTapGesture {
-                                        balance += investment
-                                    }
+                            Button {
+                                
+                            } label: {
+                                ZStack(alignment: .topLeading) {
+                                    Rectangle()
+                                        .cornerRadius(12)
+                                        .foregroundColor(Color("btn"))
+                                    Text("Buy")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 24))
+                                        .fontWeight(.medium)
+                                        .padding([.vertical, .leading])
                                 }
-                                Button {
-                                    
-                                } label: {
-                                    ZStack(alignment: .topLeading) {
-                                        Rectangle()
-                                            .cornerRadius(12)
-                                            .foregroundColor(Color("btn"))
-                                        Text("Buy")
-                                            .foregroundColor(.white)
-                                            .font(.system(size: 24))
-                                            .fontWeight(.medium)
-                                            .padding([.vertical, .leading])
-                                    }
-                                    .onTapGesture {
-                                        if balance >= investment {
-                                            balance -= investment
-                                        }
+                                .onTapGesture {
+                                    if balance >= investment {
+                                        balance -= investment
+                                        vm.showAlert = true
                                     }
                                 }
                             }
-                            .frame(height: 63)
-                            
                         }
-                        .frame(width: .infinity)
-                        .padding(36)
-                        .background(
-                            Color("bgmain")
-                        )
-                       .offset(y: -90)
-                       .zIndex(1)
-                       .padding(.bottom, -keyboardHeight/3.5)
-                               // 3.
-                               .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0
-                                   if $0 == CGFloat(0) {
-                                       for item in vm.cancellables {
-                                           item.cancel()
-                                       }
-                                       self.vm.timerFlag = false
-                                       self.vm.setUpTimer()
-                                   }
-                               }
-                       
+                        .frame(height: 63)
+                        
                     }
-                .offset(y: 20)
-                
-                   
-                    
-                    //.ignoresSafeArea()
-                    // .background(
-                    //Color("bgmain");)
-                    
+                    .frame(width: .infinity)
+                    .padding(36)
+                    .background(
+                        Color("bgmain")
+                    )
+                    .offset(y: -90)
+                    .zIndex(1)
+                    .padding(.bottom, -keyboardHeight/3.5)
+                    // 3.
+                    .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0
+                        if $0 == CGFloat(0) {
+                            for item in vm.cancellables {
+                                item.cancel()
+                            }
+                            self.vm.timerFlag = false
+                            self.vm.setUpTimer()
+                        }
+                    }
                     
                 }
+                .offset(y: 20)
+                
+                
+                
+                //.ignoresSafeArea()
+                // .background(
+                //Color("bgmain");)
+                
+                if vm.showAlert {
+                    CustomAlertView(
+                        title: "Successfully!",
+                        description: "",
+//                        cancelAction: {
+//                            // Cancel action here
+//                            withAnimation {
+//                                vm.showAlert.toggle()
+//                            }
+//                        },
+//                        cancelActionTitle: "Don't Allow",
+                        primaryAction: {
+                            // Primary action here
+                         
+                            withAnimation {
+                                vm.showAlert.toggle()
+                            }
+                        },
+                        primaryActionTitle: "Ok"
+                    )
+                }
             }
+        }
         .onAppear {
             vm.setUpTimer()
         }
-        }
+      
+    }
+    
+    func reload() {
+        model.shouldRefresh.send(true)
+    }
 }
+
+//extension TradeView {
+    class Model2: ObservableObject {
+        var shouldRefresh = CurrentValueSubject<Bool, Never>(false)
+    }
+//}
 
 struct TradeView_Previews: PreviewProvider {
     static var previews: some View {

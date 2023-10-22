@@ -29,7 +29,8 @@ struct LoaderView: View {
                     .foregroundColor(Color("btn"))
                     .cornerRadius(30)
                     .frame(width: CGFloat(percent)/100 * geometry.size.width)
-                    .animation(.easeIn(duration: 0.1), value: percent)
+                    .animation(.easeIn(duration: 0.3), value: percent)
+                    .drawingGroup()
             }
         }
     }
