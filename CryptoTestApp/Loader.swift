@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Loader: View {
-    @State var percent: Int = 0
+    @Binding var percent: Int
     var body: some View {
         ZStack {
             Rectangle()
@@ -25,6 +25,6 @@ struct Loader: View {
 
 struct Loader_Previews: PreviewProvider {
     static var previews: some View {
-        Loader()
+        Loader(percent: .constant(23))
     }
 }

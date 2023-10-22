@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LoaderView: View {
     @State var showAlert = false
-    @State var percent: Int
+    @Binding var percent: Int
     
     var body: some View {
         StarView.overlay(OverlayView.mask(StarView)).overlay(PercentView)
@@ -29,6 +29,7 @@ struct LoaderView: View {
                     .foregroundColor(Color("btn"))
                     .cornerRadius(30)
                     .frame(width: CGFloat(percent)/100 * geometry.size.width)
+                    .animation(.easeIn(duration: 0.1), value: percent)
             }
         }
     }
@@ -42,7 +43,7 @@ struct LoaderView: View {
 
 struct LoaderView_Previews: PreviewProvider {
     static var previews: some View {
-        LoaderView(percent: 100)
+        LoaderView(percent: .constant(50))
     }
 }
 

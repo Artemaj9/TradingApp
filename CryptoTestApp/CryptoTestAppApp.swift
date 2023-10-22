@@ -11,7 +11,7 @@ import SwiftUI
 struct CryptoTestAppApp: App {
     var body: some Scene {
         WindowGroup {
-            Tabbar()
+            FirstScreen()
                 .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
         }
     }
