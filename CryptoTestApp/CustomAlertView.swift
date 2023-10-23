@@ -13,6 +13,7 @@ struct CustomAlertView<Content: View>: View {
 
     let title: String
     let description: String
+    let material: Material
 
     var cancelAction: (() -> Void)?
     var cancelActionTitle: String?
@@ -22,8 +23,10 @@ struct CustomAlertView<Content: View>: View {
 
     var customContent: Content?
 
+
     init(title: String,
          description: String,
+         material: Material,
          cancelAction: (() -> Void)? = nil,
          cancelActionTitle: String? = nil,
          primaryAction: (() -> Void)? = nil,
@@ -31,6 +34,7 @@ struct CustomAlertView<Content: View>: View {
          customContent: Content? = EmptyView()) {
         self.title = title
         self.description = description
+        self.material = material
         self.cancelAction = cancelAction
         self.cancelActionTitle = cancelActionTitle
         self.primaryAction = primaryAction
@@ -79,7 +83,7 @@ struct CustomAlertView<Content: View>: View {
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .center)
             }
             .frame(minWidth: 0, maxWidth: 400, alignment: .center)
-            .background(.ultraThickMaterial)
+            .background(material)
             .cornerRadius(10)
             .padding([.trailing, .leading], 50)
         }

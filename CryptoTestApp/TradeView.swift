@@ -27,7 +27,7 @@ struct TradeView: View {
                     .ignoresSafeArea()
                 VStack {
                     Text("Trade")
-                        .font(Font.custom("Inter-Bold", size: 18))
+                        .font(Font.custom("Inter-Bold", size: 27))
                         //.fontWeight(.black)
                         .foregroundColor(.white)
                         .padding(.top, 16)
@@ -44,10 +44,12 @@ struct TradeView: View {
                         
                         VStack {
                             Text("Balance")
-                                .font(.body)
+                                .font(Font.custom("Inter-Medium", size: 12))
+                                .foregroundColor(Color("ratingheader"))
                                 .padding(.bottom, 3)
                             Text("\(balance)")
-                                .fontWeight(.black)
+                                .font(Font.custom("Inter-Bold", size: 16))
+                                .foregroundColor(.white)
                         }
                         
                         .foregroundColor(.white)
@@ -75,6 +77,8 @@ struct TradeView: View {
                                 
                                     .frame(height: 63)
                                 Text(vm.pair)
+                                    .font(Font.custom("Inter-Bold", size: 19))
+                                    .foregroundColor(.white)
                                     .foregroundColor(.white)
                                 HStack {
                                     Spacer()
@@ -92,7 +96,9 @@ struct TradeView: View {
                                     .foregroundColor(Color("graybalance"))
                                 VStack {
                                     Text("Timer")
-                                        .font(.body)
+                                        .font(Font.custom("Inter-Medium", size: 14))
+                                        .offset(x: 2)
+                                   
                                         .foregroundColor(Color("greytxt"))
                                         .offset(y: 0)
                                     HStack {
@@ -122,6 +128,7 @@ struct TradeView: View {
                                         Spacer()
                                         SearchBarView(timeText: $vm.timeText,
                                                       vm: vm,placeholder: "", backgroundColor: Color("graybalance"))
+                                        .offset(x: -2)
                                         .onTapGesture {
                                             reload()
                                         }
@@ -159,8 +166,9 @@ struct TradeView: View {
                                     .foregroundColor(Color("graybalance"))
                                 VStack {
                                     Text("Investment")
-                                        .font(.body)
+                                        .font(Font.custom("Inter-Medium", size: 14))
                                         .foregroundColor(Color("greytxt"))
+                                        .offset(x: 2)
                                     // .offset(y: -8)
                                     HStack {
                                         Button {
@@ -211,9 +219,10 @@ struct TradeView: View {
                                         .foregroundColor(Color("redSell"))
                                     Text("Sell")
                                         .foregroundColor(.white)
-                                        .font(.system(size: 24))
+                                        .font(Font.custom("Inter-Medium", size: 24))
                                         .fontWeight(.medium)
                                         .padding([.vertical, .leading])
+                                        .offset(y: -4)
                                 }
                                 .onTapGesture {
                                     balance += investment
@@ -229,9 +238,10 @@ struct TradeView: View {
                                         .foregroundColor(Color("btn"))
                                     Text("Buy")
                                         .foregroundColor(.white)
-                                        .font(.system(size: 24))
+                                        .font(Font.custom("Inter-Medium", size: 24))
                                         .fontWeight(.medium)
                                         .padding([.vertical, .leading])
+                                        .offset(y: -4)
                                 }
                                 .onTapGesture {
                                     if balance >= investment {
@@ -277,6 +287,8 @@ struct TradeView: View {
                     CustomAlertView(
                         title: "Successfully!",
                         description: "",
+                        material: .ultraThinMaterial,
+                        
 //                        cancelAction: {
 //                            // Cancel action here
 //                            withAnimation {
@@ -293,6 +305,7 @@ struct TradeView: View {
                         },
                         primaryActionTitle: "OK"
                     )
+                    .opacity(0.85)
                 }
             }
         }

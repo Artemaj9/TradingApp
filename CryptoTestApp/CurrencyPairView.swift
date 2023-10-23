@@ -33,6 +33,7 @@ struct CurrencyPairView: View {
                             
                             ZStack {
                                 Text(pair.pair)
+                                    .font(Font.custom("Inter-Medium", size: 14))
                                     .foregroundColor(.white)
                                     .padding()
                             }
@@ -75,8 +76,7 @@ struct CurrencyPairView: View {
             }
             ToolbarItem(placement: .principal) {
                 Text("Currency pair")
-                    .fontWeight(.semibold)
-                    .font(.title)
+                    .font(Font.custom("Inter-Bold", size: 22))
                     .foregroundColor(.white)
                     .offset(y: 12)
             }

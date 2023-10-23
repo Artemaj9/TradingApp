@@ -32,6 +32,7 @@ sounds and icon badges. This can be
 cofigured in Settings.
 """
                     ,
+                    material: .ultraThick,
                     cancelAction: {
                         // Cancel action here
                         withAnimation {

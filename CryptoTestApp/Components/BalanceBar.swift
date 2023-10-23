@@ -22,6 +22,8 @@ struct BalanceBarView: View {
     var body: some View {
             
             TextField(placeholder, value: $timeText, formatter: NumberFormatter())
+            .font(Font.custom("Inter-Bold", size: 17))
+            .foregroundColor(.white)
                 .foregroundColor(.white)
                 .disableAutocorrection(true)
                 .submitLabel(.return)

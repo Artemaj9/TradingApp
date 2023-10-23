@@ -75,6 +75,7 @@
 		AC6F42462AE5EE930021FAB9 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		AC6F42472AE5EE930021FAB9 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 		AC6F42482AE5EE930021FAB9 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		AC6F42522AE5F0BE0021FAB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ACCDA4062AE1375700DBD278 /* CryptoTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTestAppApp.swift; sourceTree = "<group>"; };
 		ACCDA40B2AE1375700DBD278 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 		ACCDA4082AE1375700DBD278 /* CryptoTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				AC6F42522AE5F0BE0021FAB9 /* Info.plist */,
 				ACCDA43C2AE2AEE300DBD278 /* Tabbar */,
 				ACCDA41F2AE1499F00DBD278 /* CustomAlertView.swift */,
 				ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */,
@@ -458,6 +460,7 @@
 				DEVELOPMENT_TEAM = 482344W3R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoTestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -488,6 +491,7 @@
 				DEVELOPMENT_TEAM = 482344W3R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoTestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

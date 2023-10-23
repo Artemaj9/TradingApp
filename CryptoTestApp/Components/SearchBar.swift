@@ -20,6 +20,7 @@ struct SearchBarView: View {
     var body: some View {
             
             TextField(placeholder, text: $timeText)
+            .font(Font.custom("Inter-Bold", size: 17))       
                 .foregroundColor(.white)
                 .disableAutocorrection(true)
                 .keyboardType(.numberPad)

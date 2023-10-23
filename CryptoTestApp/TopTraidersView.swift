@@ -16,33 +16,37 @@ struct TopTraidersView: View {
                     .ignoresSafeArea()
                 VStack(spacing: 0) {
                     Text("TOP 10 Traders")
-                        .fontWeight(.bold)
+                        .font(Font.custom("Inter-Bold", size: 27))
                         .padding(.top, 20)
                         .padding(.bottom, 28)
-                        .font(.system(size: 24))
                         .foregroundColor(.white)
                     
                         HStack() {
                             Text("№")
+                                .font(Font.custom("Inter-Medium", size: 12))
                                 .frame(
                                     width: geometry.size.width * 0.05, alignment: .leading
                                 )
                                 .offset(x: -4)
                             Spacer()
                             Text("Country")
+                                .font(Font.custom("Inter-Medium", size: 12))
                                 .frame(
                                     width: geometry.size.width * 0.17, alignment: .center
                                 )
                             Text("Name")
+                                .font(Font.custom("Inter-Medium", size: 12))
                                 .frame(
                                     width: geometry.size.width * 0.15, alignment: .center
                                 )
                             Text("Deposit")
+                                .font(Font.custom("Inter-Medium", size: 12))
                                 .frame(
                                     width: geometry.size.width * 0.2, alignment: .trailing
                                 )
                                 .offset(x: -8)
                             Text("Profit")
+                                .font(Font.custom("Inter-Medium", size: 12))
                                 .frame(
                                     width: geometry.size.width * 0.2, alignment: .trailing
                                 )
@@ -57,6 +61,7 @@ struct TopTraidersView: View {
                     ForEach(mocData.indices) { index in
                         HStack {
                             Text(String(mocData[index].position))
+                                .font(Font.custom("Inter-Medium", size: 14))
                                 .foregroundColor(Color("ratingheader"))
                                 .frame(
                                     width: geometry.size.width * 0.05, alignment: .leading
@@ -67,15 +72,18 @@ struct TopTraidersView: View {
                                     width: geometry.size.width * 0.18, alignment: .center
                                 )
                             Text(mocData[index].name)
+                                .font(Font.custom("Inter-Medium", size: 14))
                                 .foregroundColor(.white)
                                 .frame(
                                     width: geometry.size.width * 0.15, alignment: .center                               )
                             Text("$\(mocData[index].deposit)")
+                                .font(Font.custom("Inter-Medium", size: 14))
                                 .foregroundColor(.white)
                                 .frame(
                                     width: geometry.size.width * 0.2, alignment: .center
                                 )
                             Text("$\(mocData[index].profit)")
+                                .font(Font.custom("Inter-Medium", size: 14))
                                 .foregroundColor(Color("btn"))
                                 .frame(
                                     width: geometry.size.width * 0.2, alignment: .trailing
