@@ -18,7 +18,7 @@ enum Source {
   {
   "autosize": true,
   "symbol": "BINANCE:BUSDRUB",
-  "interval": "5",
+  "interval": "D",
   "timezone": "Etc/UTC",
   "theme": "dark",
   "style": "1",

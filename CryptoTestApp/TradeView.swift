@@ -27,8 +27,8 @@ struct TradeView: View {
                     .ignoresSafeArea()
                 VStack {
                     Text("Trade")
-                        .font(.title)
-                        .fontWeight(.black)
+                        .font(Font.custom("Inter-Bold", size: 18))
+                        //.fontWeight(.black)
                         .foregroundColor(.white)
                         .padding(.top, 16)
                     ZStack {
