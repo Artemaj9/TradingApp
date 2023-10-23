@@ -33,7 +33,7 @@ struct CurrencyPairView: View {
                             
                             ZStack {
                                 Text(pair.pair)
-                                    .font(Font.custom("Inter-Medium", size: 14))
+                                    .font(Font.custom("SF-Pro-Text=Semibold", size: 14))
                                     .foregroundColor(.white)
                                     .padding()
                             }

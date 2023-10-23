@@ -31,6 +31,7 @@
 		AC6F424F2AE5EFD40021FAB9 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC6F42462AE5EE930021FAB9 /* Inter-Regular.ttf */; };
 		AC6F42502AE5EFD60021FAB9 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC6F42402AE5EE930021FAB9 /* Inter-SemiBold.ttf */; };
 		AC6F42512AE5EFDA0021FAB9 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC6F42472AE5EE930021FAB9 /* Inter-Thin.ttf */; };
+		AC6F42542AE5FE070021FAB9 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC6F42532AE5FDF70021FAB9 /* SF-Pro-Text-Semibold.otf */; };
 		ACCDA40A2AE1375700DBD278 /* CryptoTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */; };
 		ACCDA40C2AE1375700DBD278 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDA40B2AE1375700DBD278 /* ContentView.swift */; };
 		ACCDA40E2AE1375900DBD278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCDA40D2AE1375900DBD278 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		AC6F42472AE5EE930021FAB9 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 		AC6F42482AE5EE930021FAB9 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		AC6F42522AE5F0BE0021FAB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AC6F42532AE5FDF70021FAB9 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		ACCDA4062AE1375700DBD278 /* CryptoTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCDA4092AE1375700DBD278 /* CryptoTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTestAppApp.swift; sourceTree = "<group>"; };
 		ACCDA40B2AE1375700DBD278 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		AC6F423F2AE5EE7E0021FAB9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				AC6F42532AE5FDF70021FAB9 /* SF-Pro-Text-Semibold.otf */,
 				AC6F42412AE5EE930021FAB9 /* Inter-Black.ttf */,
 				AC6F42442AE5EE930021FAB9 /* Inter-Bold.ttf */,
 				AC6F42432AE5EE930021FAB9 /* Inter-ExtraBold.ttf */,
@@ -278,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6F42542AE5FE070021FAB9 /* SF-Pro-Text-Semibold.otf in Resources */,
 				AC6F424B2AE5EFC50021FAB9 /* Inter-ExtraBold.ttf in Resources */,
 				AC6F424F2AE5EFD40021FAB9 /* Inter-Regular.ttf in Resources */,
 				AC6F424C2AE5EFC80021FAB9 /* Inter-ExtraLight.ttf in Resources */,
